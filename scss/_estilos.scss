@@ -1,0 +1,115 @@
+/* ESTILOS GENERALES */
+
+.encabezado {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/*VARIABLES*/
+$caqui: rgb(194, 190, 131);
+$negro: black;
+$gris: rgb(128, 125, 125);
+$lightbeige: rgb(238, 235, 227);
+
+// estilos standard
+header, footer, .caqui {
+  background-color: $caqui;
+}
+
+h3 {
+  padding-top: 5px;
+}
+
+h1 {
+  text-shadow: 3px 3px 1px $gris;
+  font-family: "Montserrat", sans-serif;
+}
+
+.paddingTexto {
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+.paddingTituloResenias {
+  padding: 2rem 0rem 2rem 1rem;
+}
+
+.invisible {
+  height: 0px;
+}
+
+.navbar-brand img
+{
+max-height: 1%;
+}
+
+// ======= FOR PARA INCREMENTAR BACKGROUND COLOR ETIQUETA P =========
+/* ======= FOR PARA INCREMENTAR BACKGROUND COLOR ETIQUETA P ========= */
+.color {
+  width: auto;
+  margin-bottom: 48px;
+}
+@for $i from 1 through 9 {
+  .color:nth-child(#{2 * $i}) {
+    background-color: darken(#f1f1e9, $i * 2.5);
+  }
+}
+
+// ======= MAP E EACH PARA MODIFICAR TAMANO IMAGEN =========
+/* ======= MAP E EACH PARA MODIFICAR TAMANO IMAGEN ========= */
+$tamanio: (
+  chico: 500px,
+  mediano: 600px,
+  grande: 700px,
+  muygrande: 800px,
+  enorme: 900px,
+);
+
+@each $foto, $pixeles in $tamanio {
+  .ancho-#{$foto} {
+    width: $pixeles;
+  }
+}
+
+// ========== BEM ==========
+/* ========== BEM ========== */
+.sombra__h3 {
+  text-shadow: 2px 2px 1px $negro;
+  font-weight: bold;
+  font-size: 1.625rem;
+}
+
+.sombra__p {
+  text-shadow: 2px 2px 1px $negro;
+  font-weight: bold;
+}
+
+.card__card-background {
+  background-color: $lightbeige;
+}
+
+.mb-4__fw-bolder {
+  font-weight: bolder;
+}
+
+.mb-5__fuente {
+  font-family: "Calibri", sans-serif;
+}
+
+.shadow-lg__segundoTitulo {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bolder;
+  font-size: 1.75rem;
+}
+
+.card__padd-7 {
+  padding: 20px;
+  text-align: justify;
+}
+
+.card__padd-8 {
+  padding: 10px 20px;
+  text-align: justify;
+}
+
+/* FIN ESTILOS PROPIOS */
